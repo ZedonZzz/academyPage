@@ -1,32 +1,45 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style>
+@font-face {
+  font-family: siyuan;
+  src: url('./assets/font/SourceHanSansCN-Medium.otf');
+}
+html,
+body,
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  width: 100%;
+  height: 100%;
+  font-family: 'siyuan';
 }
-
-#nav {
-  padding: 30px;
+.main {
+  width: 100%;
+  height: 100%;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+::-webkit-scrollbar-track {
+  width: 6px;
+  background-color: rgba(204, 204, 204, 0.1);
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(204, 204, 204, 0.5);
+  background-clip: padding-box;
+  min-height: 28px;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(204, 204, 204, 1);
 }
 </style>
